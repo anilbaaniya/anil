@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1> FOOD ORDERING SYSTEM</h1> 
+        <h2> Registration Page</h2>
+    <button>
+    <form action="login.html" onsubmit="return validateForm()">
+        ENTER FIRST NAME:: <br>
+        <input type="text" id="fname"> <br>
+        ENTER LAST NAME:: <br>
+        <input type="text" id="lname"> <br>
+        ENTER EMAIL:: <br>
+        <input type="email" id="email"> <br>
+        <input type="radio" name="gender" value="MALE" id="male">
+        <label for="male">Male</label> <br>
+        <input type="radio" name="gender" value="FEMALE" id="female"> 
+         <label for="female">Female</label> <br>
+        CREATE PASSWORD:: <br>
+        <input type="password" id="p1"> <br>
+        CONFIRM PASSWORD:: <br>
+        <input type="password" id="p2"> <br>
+        <input type="submit" value="Sign Up" id="d">
+        <input type="reset" value="Clear" id="e">
+        
+    </form>
+    <script src="password.js"></script>
+
+<a href="login.html">Already Have an Account?<br>
+Click Here To Go Login Page
+</a>
+</button>
+    </div>
+    <script>
+        function validateForm() {
+            var Fname = document.getElementById('fname').value;
+            var Lname = document.getElementById('lname').value;
+            var Email = document.getElementById('email').value;
+            var Male = document.getElementById('male').value;
+            var Female = document.getElementById('female').value;
+            var password = document.getElementById('p1').value;
+            var Password = document.getElementById('p2').value;
+
+            if (Fname === '' || Lname === '' || Email === '' || (!Male && !Female)  || password === '' || Password === '') {
+                alert('Please fill in all the required fields.');
+                return false; // Prevent form submission
+            }
+
+            // If all fields are filled, allow the form submission
+            return true;
+        }
+    </script>
+    
+</body>
+</html>

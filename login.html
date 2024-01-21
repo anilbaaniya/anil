@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+   <div class="data">
+    <h1>Login Page</h1>
+    <button>
+        <form action="page.html" onsubmit="return validateForm()">
+            EMAIL:: <br>
+            <input type="text" id="email"> <br>
+            PASSWORD:: <br>
+            <input type="password"  id="ps"> <br>
+            <input type="submit" value="Login">
+             <input type="reset" value="Clear">
+    
+        </form>
+    </button>
+   </div>
+   <script>
+    function validateForm()
+    {
+        var Email =document.getElementById('email').value;
+        var password = document.getElementById('ps').value;
+        if(Email === '' || password==='')
+        {
+            alert('Please fill in all the required fields.');
+                return false;
+        }
+        return true;
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.container
+{
+   
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-top: 70px;
+    margin-left: 50px;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+}
+.container input {
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: lighter;
+}
+button
+{
+    border-radius: 6px;
+    background-color: peru;
+    color: black;
+}
+body
+{
+  background-color: darkslategrey; 
+}
+h1
+{
+    color: whitesmoke;
+}
+h2{
+    color: whitesmoke;
+}
+a
+{
+    font-size: 20px;
+}
